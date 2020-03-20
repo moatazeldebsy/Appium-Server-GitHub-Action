@@ -33,18 +33,18 @@ I created  this GitHub action to install the Appium server using nodeJS and npm 
 workflow/main.yml:
 
 ```yaml
-name: Android CI
+name: Appium CI
 on: [push]
 
 jobs:
   Sauce Labs App Automate:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Appium Test
     steps:
       - name: Checkout
         uses: actions/checkout@v2
        - name: Install and Run Appium Server
-         uses: moatazeldebsy/appium-server-gitHub-action@V1.0.3
+         uses: moatazeldebsy/appium-server-gitHub-action@V1.0.4
 ```
 
 <br>

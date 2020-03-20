@@ -2,7 +2,7 @@
 Running Appium Server with GitHub Action to be able to run Appium mobile test automation scripts
 
 
-<img src="img/0.png" alt="appium" align="center"/>
+<img src="img/0.png" alt="appium" align="middle" />
 
 
 ### What is Appium?
@@ -10,7 +10,7 @@ Appium is an open-source test automation framework for use with native, hybrid a
 It drives iOS, Android, and Windows apps using the WebDriver protocol.
 
 
-<img src="img/1.png" alt="appium" align="center"/>
+<img src="img/1.png" alt="appium" align="middle" />
 
 ### What is the problem ?
 The problem now that, how can we run an Appium server on GitHub Actions?

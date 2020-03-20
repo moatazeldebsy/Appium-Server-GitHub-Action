@@ -37,39 +37,45 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Hello world action step
-        uses: moatazeldebsy/appium-server-gitHub-action@V1.0.0
-        id: appium server
+       - name: Install and Run Appium Server
+         uses: moatazeldebsy/appium-server-gitHub-action@V1.0.3
 ```
 
 <br>
 
-## Usage with Android Gradle to build your app
+## Usage with Appium and Android Gradle
 
 workflow/android.yml:
 
 ```yaml
-name: Android CI
+name: Appium CI
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        api-level: [25]
+        target: [default]
     steps:
     - uses: actions/checkout@v2
-    - name: set up JDK 1.8
+    - name: Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Sauce Labs App Automate Action
-      uses: moatazeldebsy/appium-server-gitHub-action@V1.0.0
+    - name: Install and Run Appium Server
+      uses: moatazeldebsy/appium-server-gitHub-action@V1.0.3
+      
+    - name: Run Appium Tests
+      uses: reactivecircus/android-emulator-runner@v1
+      with:
+        api-level: ${{ matrix.api-level }}
+        target: ${{ matrix.target }}
+        arch: x86_64
+        profile: Nexus 6
+        script: ./gradlew test --info
 
 ```
 

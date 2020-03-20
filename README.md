@@ -49,6 +49,20 @@ jobs:
 
 <br>
 
+## Usage in in the code
+
+```java
+@BeforeClass
+    public void setUp() throws MalformedURLException {
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability("automationName" , "UiAutomator1");
+        caps.setCapability("platformName" , "Android");
+        caps.setCapability("platformVersion" , "7.1.1");
+        caps.setCapability("deviceName" , "Android Emulator");
+        caps.setCapability("app" , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
+        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+    }
+```
 ## Contributing
 
 Are you facing an issue? Have some questions? Would like to implement a new feature? Learn more about our [contributing guidelines](CONTRIBUTING.md).

@@ -70,3 +70,16 @@ jobs:
       uses: moatazeldebsy/appium-server-gitHub-action@V1.0.0
 
 ```
+
+
+<br>
+
+## Contributing
+
+Are you facing an issue? Have some questions? Would like to implement a new feature? Learn more about our [contributing guidelines](CONTRIBUTING.md).
+
+<br>
+
+## Licence
+
+The project is released under the [MIT License](LICENSE).

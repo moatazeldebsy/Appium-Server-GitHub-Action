@@ -1,5 +1,5 @@
-name: 'Sauce Labs App Automate Action'
-description: 'Run Mobile test automation for Android'
+name: 'Appium Server Action'
+description: 'Install and Run Appium Server for your Android and iOS mobile testing'
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -1,0 +1,8 @@
+name: 'Sauce Labs App Automate Action'
+description: 'Run Mobile test automation for Android'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: check-square
+  color: purple

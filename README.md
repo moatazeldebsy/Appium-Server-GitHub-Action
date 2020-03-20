@@ -1,8 +1,14 @@
-# Appium-Server-GitHub-Action
-Running Appium Server with GitHub Action to be able to run Appium mobile test automation scripts
+# Appium Server GitHub Action
 
 [![Release](https://img.shields.io/github/release/moatazeldebsy/Appium-Server-GitHub-Action.svg)](https://github.com/moatazeldebsy/Appium-Server-GitHub-Action/releases)
 [![Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue.svg)](https://github.com/marketplace/actions/appium-server-action)
+
+Running `Appium` Server with `GitHub Action` to be able to run `Appium` mobile test automation scripts (`Android and iOS`)
+
+Inspired by the 2020 [GitHub Actions Hackathon.](https://githubhackathon.com/)
+
+### Note
+> This action is expected to be run within a ubuntu virtual machine
 
 <img src="img/0.png" alt="appium" align="middle" />
 
@@ -40,45 +46,6 @@ jobs:
        - name: Install and Run Appium Server
          uses: moatazeldebsy/appium-server-gitHub-action@V1.0.3
 ```
-
-<br>
-
-## Usage with Appium and Android Gradle
-
-workflow/android.yml:
-
-```yaml
-name: Appium CI
-
-on: [push]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        api-level: [25]
-        target: [default]
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Install and Run Appium Server
-      uses: moatazeldebsy/appium-server-gitHub-action@V1.0.3
-      
-    - name: Run Appium Tests
-      uses: reactivecircus/android-emulator-runner@v1
-      with:
-        api-level: ${{ matrix.api-level }}
-        target: ${{ matrix.target }}
-        arch: x86_64
-        profile: Nexus 6
-        script: ./gradlew test --info
-
-```
-
 
 <br>
 

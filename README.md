@@ -8,7 +8,7 @@ Running `Appium` Server with `GitHub Action` to be able to run `Appium` mobile t
 Inspired by the 2020 [GitHub Actions Hackathon.](https://githubhackathon.com/)
 
 ### Note
-> This action is expected to be run within a ubuntu virtual machine
+> This action is expected to be run within a ubuntu virtual machine and Android apps
 
 <img src="img/0.png" alt="appium" align="middle" />
 

@@ -3,7 +3,7 @@
 [![Release](https://img.shields.io/github/release/moatazeldebsy/Appium-Server-GitHub-Action.svg)](https://github.com/moatazeldebsy/Appium-Server-GitHub-Action/releases)
 [![Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue.svg)](https://github.com/marketplace/actions/appium-server-action)
 
-Running `Appium` Server with `GitHub Action` to be able to run `Appium` mobile test automation scripts (`Android and iOS`)
+Running `Appium` Server with `GitHub Action` to be able to run `Appium` mobile test automation scripts (`Android`)
 
 Inspired by the 2020 [GitHub Actions Hackathon.](https://githubhackathon.com/)
 

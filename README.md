@@ -1,5 +1,7 @@
 # Appium Server GitHub Action
 
+# Version 1.0.7 is now supporting Appium v2 and XCUITest, Espresso and Flutter driver
+
 [![Release](https://img.shields.io/github/release/moatazeldebsy/Appium-Server-GitHub-Action.svg)](https://github.com/moatazeldebsy/Appium-Server-GitHub-Action/releases)
 [![Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue.svg)](https://github.com/marketplace/actions/appium-server-action)
 
@@ -44,7 +46,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
        - name: Install and Run Appium Server
-         uses: moatazeldebsy/appium-server-gitHub-action@V1.0.4
+         uses: moatazeldebsy/appium-server-gitHub-action@V1.0.7
 ```
 
 <br>
@@ -54,13 +56,14 @@ jobs:
 ```java
 @BeforeClass
     public void setUp() throws MalformedURLException {
-        DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("automationName" , "UiAutomator1");
+         DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability("automationName" , "espresso");
         caps.setCapability("platformName" , "Android");
-        caps.setCapability("platformVersion" , "7.1.1");
-        caps.setCapability("deviceName" , "Android Emulator");
-        caps.setCapability("app" , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
-        driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        caps.setCapability("appium:platformVersion" , "9");
+        caps.setCapability("appium:deviceName" , "Android Emulator");
+        caps.setCapability("appium:app" ,
+                System.getProperty("user.dir")+"/apps/app-debug.apk");
+        driver = new AndroidDriver(new URL("http://localhost:4723"), caps);
     }
 ```
 ## Contributing

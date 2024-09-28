@@ -1,5 +1,5 @@
 name: 'Appium Server Action'
-description: 'Install and Run Appium Server for your Android and iOS mobile testing'
+description: 'moatazeldebsy/App1'
 runs:
   using: 'docker'
   image: 'Dockerfile'
